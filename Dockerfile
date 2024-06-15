@@ -8,4 +8,4 @@ COPY target/biblioteca.war /opt/payara/deployments/
 EXPOSE 8080
 
 # Iniciar Payara Micro
-CMD ["java", "-jar", "/opt/payara/payara-micro.jar", "--deploy", "/opt/payara/deployments/biblioteca.war", "--contextRoot", "/"]
+ENTRYPOINT ["java", "-jar", "/opt/payara/payara-micro.jar", "--deploy", "/opt/payara/deployments/biblioteca.war", "--contextRoot", "/"]
